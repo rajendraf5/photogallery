@@ -8,7 +8,6 @@
   <link href="assets/images/favicon.png" rel="icon">
   <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -21,6 +20,7 @@
 </head>
 </head>
 <body>
+
   <section class="d-flex align-items-center topbar fixed-top">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center"> 
@@ -36,22 +36,84 @@
       </div>
     </div>
   </section>
+
   <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="#">PHOTOLAND</a></h1>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link active" href="#">Home</a></li>
-          <li><a class="nav-link" href="#">About</a></li>
-          <li><a class="nav-link" href="#">Gallery</a></li>
-          <li><a class="nav-link" href="#">Category</a></li>
-          <li><a class="nav-link" href="#">Video</a></li>
-          <li><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav> 
-    </div>
+    <nav class="navbar navbar-expand-lg">
+<div class="container">
+  <a class="navbar-brand logo" href="#">PHOTOLAND</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="bi bi-list mobile-nav-toggle"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gallery</a>
+            <div class="dropdown-menu megamenu container mx-auto shadow-lg" role="menu">
+              <div class="row">
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-12">
+                  <div class="col-megamenu">
+                    <h6 class="fw-bold">Outfit</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Bridal Lehenga</a></li>
+                      <li><a href="#">Wedding Sarees</a></li>
+                      <li><a href="#">Engagement</a></li>
+                      <li><a href="#">Mehndi</a></li>
+                      <li><a href="#">Blouse Designs</a></li>
+                      <li><a href="#">More</a></li>
+                    </ul>
+                  </div>  <!-- col-megamenu.// -->
+                </div><!-- end col-3 -->
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-12">
+                  <div class="col-megamenu">
+                    <h6 class="fw-bold">Mehndi</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Arabic</a></li>
+                      <li><a href="#">Mehndi Designs</a></li>
+                      <li><a href="#">Simple</a></li>
+                      <li><a href="#">Unique</a></li>
+                      <li><a href="#">More</a></li>
+                    </ul>
+                  </div>  <!-- col-megamenu.// -->
+                </div><!-- end col-3 -->
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-12">
+                  <div class="col-megamenu">
+                    <h6 class="fw-bold">Wedding Card Designs</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Designs</a></li>
+                      <li><a href="#">Wedding Gifts</a></li>
+                      <li><a href="#">Wedding Invitations</a></li>
+                      <li><a href="#">More</a></li>
+                    </ul>
+                  </div>  <!-- col-megamenu.// -->
+                </div>    
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-12">
+                  <div class="col-megamenu">
+                    <h6 class="fw-bold">Bridal Makeup & Hair</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Bridal Makeup</a></li>
+                      <li><a href="#">Bridal Hairstyles</a></li>
+                      <li><a href="#">Engagement</a></li>
+                      <li><a href="#">Mehndi</a></li>
+                      <li><a href="#">More</a></li>
+                    </ul>
+                  </div>  <!-- col-megamenu.// -->
+                </div><!-- end col-3 -->
+              </div><!-- end row --> 
+            </div> <!-- dropdown-mega-menu.// -->
+      </li>
+       <li><a class="nav-link" href="#">Category</a></li>
+      <li><a class="nav-link" href="#">Video</a></li>
+      <li><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+
+  </div> <!-- navbar-collapse.// -->
+</nav>
+
   </header>
+
+
    <section id="hero">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -91,9 +153,9 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All Type</li>
-              <li data-filter=".filter-app">Individual</li>
-              <li data-filter=".filter-card">Corporate</li>
-              <li data-filter=".filter-web">Other</li>
+              <li data-filter=".filter-app">Wedding</li>
+              <li data-filter=".filter-card">Engagement</li>
+              <li data-filter=".filter-web">Mehndi</li>
             </ul>
           </div>
         </div>
@@ -164,6 +226,28 @@
               <div class="portfolio-info">
                 <div class="portfolio-links">
                   <a href="assets/images/portfolio/gallery-original-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!--./col-xl-3-->
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/images/portfolio/gallery-original-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="assets/images/portfolio/gallery-original-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!--./col-xl-3-->
+
+           <div class="col-xl-4 col-lg-4 col-md-6 col-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/images/portfolio/gallery-original-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="assets/images/portfolio/gallery-original-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
                 </div>
               </div>
             </div>
@@ -261,56 +345,79 @@
     </div>
   </section>
 
-<section class="spacetop spacebottom bg-gray">
+<section class="photography">
+  <div class="container container-xl container-xxl">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-12 text-center">
+          <h2 class="section-title wow-outer text-white mb-4"><span>Fashion Photography</span></h2>
+          <p>We take your privacy very seriously. This privacy policy governs and details the main privacy principles we apply to the data we collect through our service. Click here to access our privacy policy governing our corporate website.</p>
+          <a href="#" class="outlinebtn mt-4">Read more</a>
+      </div> 
+    </div>
+   </div> 
+</section>
+<section class="spacetop spacebottom">
   <div class="container container-xl container-xxl">
     <div class="row">
       <div class="col-lg-12 text-center mb-5">
-          <h2 class="section-title wow-outer"><span>Testimonials</span></h2>
+          <h2 class="section-title wow-outer"><span>Real Wedding Stories</span></h2>
         </div> 
     </div>
    </div>  
-    <div class="testimonial-content container container-xl container-xxl">
+  <div class="testimonial-content"> 
+    <div class="container container-xl container-xxl">
       <div class="row">
         <div class="col-lg-12">
           <div class="owl-carousel owl-theme">
-            <div class="item">
-               <div class="testimonials">
-                <div class="pic"><img src="assets/images/testimonial1.png" class="img-fluid" alt=""></div>
-                <div class="testimonials-wrapper">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis augue turpis id habitasse quam augue ac sed sollicitudin. Enim ipsum ac suspendisse rutrum fermentum pellentesque tristique adipiscing.</p>
-                  <h5 class="auther pt-4">Amy Smith</h5>
-                  <span class="auther-text">Art director, Australia</span>
+            <div class="item article-items">
+               <div class="testimonials shadow-sm">
+                <div class="pic"><img src="assets/images/story/story1.jpg" alt=""></div>
+                <div class="p-3">
+                  <h6 class="auther fw-bold">Shloka & Shiv</h6>
+                  <p>Elegant Wedding With A Custom Bridal Lehenga</p>
+                  <span class="text-muted">10 March 2021</span>
                 </div>
-                <div class="comma"><img src="assets/images/comma.png"></div>  
               </div>
             </div>
-            <div class="item">
-               <div class="testimonials">
-                <div class="pic"><img src="assets/images/testimonial1.png" class="img-fluid" alt=""></div>
-                <div class="testimonials-wrapper">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis augue turpis id habitasse quam augue ac sed sollicitudin. Enim ipsum ac suspendisse rutrum fermentum pellentesque tristique adipiscing.</p>
-                  <h5 class="auther pt-4">Amy Smith</h5>
-                  <span class="auther-text">Art director, Australia</span>
-                </div>
-                <div class="comma"><img src="assets/images/comma.png"></div>  
+            <div class="item article-items">
+               <div class="testimonials shadow-sm">
+                <div class="pic"><img src="assets/images/story/story2.jpg" alt=""></div>
+                <div class="p-3">
+                  <h6 class="auther fw-bold">Nimisha & Arjun</h6>
+                  <p>A Fairytale Kerala Wedding With Eye-Catching Bridal Outfits</p>
+                  <span class="text-muted">10 June 2021</span>
+                </div> 
               </div>
             </div>
-            <div class="item">
-               <div class="testimonials">
-                <div class="pic"><img src="assets/images/testimonial1.png" class="img-fluid" alt=""></div>
-                <div class="testimonials-wrapper">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis augue turpis id habitasse quam augue ac sed sollicitudin. Enim ipsum ac suspendisse rutrum fermentum pellentesque tristique adipiscing.</p>
-                  <h5 class="auther pt-4">Amy Smith</h5>
-                  <span class="auther-text">Art director, Australia</span>
-                </div>
-                <div class="comma"><img src="assets/images/comma.png"></div>  
+            <div class="item article-items">
+               <div class="testimonials shadow-sm">
+                <div class="pic"><img src="assets/images/story/story3.jpg" alt=""></div>
+                <div class="p-3">
+                  <h6 class="auther fw-bold">Komal & Gurjaipal </h6>
+                  <p>An Intimate Anand Karaj With A Stunning Red & Orange Lehenga</p>
+                  <span class="text-muted">14 March 2022</span>
+                </div> 
               </div>
             </div>
+
+            <div class="item article-items">
+               <div class="testimonials shadow-sm">
+                <div class="pic"><img src="assets/images/story/story4.jpg" alt=""></div>
+                <div class="p-3">
+                  <h6 class="auther fw-bold">Komal & Gurjaipal </h6>
+                  <p>An Intimate Anand Karaj With A Stunning Red & Orange Lehenga</p>
+                  <span class="text-muted">10 March 2022</span>
+                </div> 
+              </div>
+            </div>
+
+
           </div> 
         </div>  
       </div>         
     </div>
-  </section>
+  </div>  
+</section>
 
 
 
@@ -379,5 +486,18 @@ IL 60604-2340</li>
   <script src="assets/js/glightbox.min.js"></script>
   <script src="assets/js/isotope.pkgd.min.js"></script>
   <script src="assets/js/main.js"></script>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
+        /////// Prevent closing from click inside dropdown
+        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+          element.addEventListener('click', function (e) {
+            e.stopPropagation();
+          });
+        })
+    }); 
+  // DOMContentLoaded  end
+</script>
+
 </body>
 </html>
